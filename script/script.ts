@@ -21,17 +21,18 @@ class lokation
 
 	display()
 	{
-		return `<div>
-					<img src='${this.pic}'>
-					<h3>${this.adr}</h3>
-					<p>${this.city}</p>
-				<div>`;
+		return `
+					<div class='col-lg-3 col-md-6 col-sm-12 display'>
+						<img class='img-fluid' src='${this.pic}'>
+						<h3>${this.adr}</h3>
+						<p>${this.city}</p>
+					</div>
+				`					;
 	}
 }
 
-let church = new lokation(`img/pic1.jpg`, `St. Charles Church`, `Kreuzherrengasse 1, 1040 Vienna`);
-//document.getElementById("result").innerHTML = church.display();
-let park = new lokation(`img/pic2.jpg`,`Maxingstraße 13b`, `1130 Vienna`);
+let church = new lokation(`img/pic1.jpg`, `St. Charles Church`, `Karlsplatz 1, 1010 Vienna`);
+let park = new lokation(`img/pic2.jpg`,`Schönbrunn Park, Vienna`, `Maxingstraße 13b, 1130 Vienna`);
 
 class restaurants extends lokation 
 {
@@ -51,19 +52,21 @@ class restaurants extends lokation
 
 	display()
 	{
-		return `<div>
-					<img src='${this.pic}'>
-					<h3>${this.adr}</h3>
-					<p>${this.city}</p>
-					<p>${this.telNum}</p>
-					<p>${this.nation}</p>
-					<p>${this.url}</p>
-				<div>`;
+		return `
+					<div class='col-lg-3 col-md-6 col-sm-12 display'>
+						<img class='img-fluid' src='${this.pic}'>
+						<h3>${this.adr}</h3>
+						<p>${this.city}</p>
+						<p>${this.telNum}</p>
+						<p>${this.nation}</p>
+						<p>${this.url}</p>
+					<div>
+				`;
 	}
 }
 
-let steak = new restaurants(`img/pic2.jpg`, `Dstrikt Steakhouse`, `Schubertring 5-7, 1010 Vienna`, `0043-131188616`, `Bürgerlich`, `www.dstrikt.com`);
-let fish = new restaurants(`img/pic4.jpg`, `Kulinarium 7`, `Sigmundsgasse 1`, `1070 Vienna`, `0043-5220530`, `National`);
+let steak = new restaurants(`img/pic3.jpg`, `Dstrikt Steakhouse`, `Schubertring 5-7, 1010 Vienna`, `0043-131188616`, `Bürgerlich`, `www.dstrikt.com`);
+let fish = new restaurants(`img/pic4.jpg`, `Kulinarium 7`, `Sigmundsgasse 1,1070 Vienna`, `0043-5220530`, `National`, `https://www.kulinarium7.com/`);
 
 class events extends lokation
 {
@@ -82,19 +85,23 @@ class events extends lokation
 	
 	display()
 	{
-		return `<div>
-					<img src='${this.pic}'>
-					<h3>${this.adr}</h3>
-					<p>${this.city}</p>
-					<p>${this.date}</p>
-					<p>${this.time}</p>
-					<p>${this.price}</p>
-				<div>`;
+		return `
+					<div class='col-lg-3 col-md-6 col-sm-12 display'>
+						<div>
+							<img class='img-fluid' src='${this.pic}'>
+						</div>
+						<h3>${this.adr}</h3>
+						<p>${this.city}</p>
+						<p>${this.date}</p>
+						<p>${this.time}</p>
+						<p>${this.price}</p>
+					<div>
+				`;
 	}
 }
 
-let dropout = new events(`some/image`, `Seasik Steve by Arena`, `Baumgasse 80, 1030 Wien`, `30.05.2020`, `20:00`, `40€`);
-let blues = new events(`some/image`, `Joe Bonamassa: An Acoustic Evening At The Vienna Opera`, `Opernring 2, 1010 Wien`, `30.10.2020`, `20:00`, `80€`);
+let dropout = new events(`img/pic5.jpg`, `Seasik Steve by Arena`, `Baumgasse 80, 1030 Wien`, `30.05.2020`, `20:00`, `40€`);
+let blues = new events(`img/pic6.jpg`, `Joe Bonamassa: An Acoustic Evening At The Vienna Opera`, `Opernring 2, 1010 Wien`, `30.10.2020`, `20:00`, `80€`);
 
 for (let i = 0; i < lokArray.length; i++)
 {
