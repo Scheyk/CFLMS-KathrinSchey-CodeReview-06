@@ -12,11 +12,13 @@ body {
   margin: auto; }
 
 .inhalt {
+  min-width: 5em;
+  max-width: 18em;
   padding: 0;
-  margin: 0.2vw;
+  margin-top: 1em;
   text-align: center;
-  border-top-right-radius: 0.5vw;
-  border-bottom-left-radius: 0.7vw;
+  border-top-right-radius: 0.5em;
+  border-bottom-left-radius: 0.7em;
   background: #a9d7f2;
   background: rgba(169, 215, 242, 0.5); }
   .inhalt div {
@@ -24,7 +26,7 @@ body {
   .inhalt h3 {
     color: #941E2F; }
   .inhalt p {
-    font-size: 1.2vw;
+    font-size: 1em;
     font-weight: bold;
     margin: 0; }
 
