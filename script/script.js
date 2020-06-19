@@ -3,32 +3,43 @@ let lokArray = [];
 let restArray = [];
 let eventArray = [];
 class lokation {
-    constructor(pic, adress, city) {
+    constructor(pic, adr, city) {
         this.pic = "";
-        this.adress = "";
+        this.adr = "";
         this.city = "";
         this.pic = pic;
-        this.adress = adress;
+        this.adr = adr;
         this.city = city;
         lokArray.push(this);
     }
     display() {
-        return `${this.pic} <br> ${this.adress} <br> ${this.city}`;
+        return `<div>
+					<img src='${this.pic}'>
+					<h3>${this.adr}</h3>
+					<p>${this.city}</p>
+				<div>`;
     }
 }
-let church = new lokation(`src="img/pic1.jpg"`, `Karlsplatz 1`, `1010 Vienna`);
+let church = new lokation(`img/pic1.jpg`, `St. Charles Church`, `Kreuzherrengasse 1, 1040 Vienna`);
 //document.getElementById("result").innerHTML = church.display();
-let park = new lokation(`src= "img/pic2.jpg`, `Maxingstraße 13b`, `1130 Vienna`);
+let park = new lokation(`img/pic2.jpg`, `Maxingstraße 13b`, `1130 Vienna`);
 class restaurants extends lokation {
-    constructor(pic, adress, city, telNum, nation, url) {
-        super(pic, adress, city);
+    constructor(pic, adr, city, telNum, nation, url) {
+        super(pic, adr, city);
         this.telNum = telNum;
         this.nation = nation;
         this.url = url;
         restArray.push(this);
     }
     display() {
-        return `${super.display()} <br> ${this.telNum} <br> ${this.nation} <br> ${this.url}`;
+        return `<div>
+					<img src='${this.pic}'>
+					<h3>${this.adr}</h3>
+					<p>${this.city}</p>
+					<p>${this.telNum}</p>
+					<p>${this.nation}</p>
+					<p>${this.url}</p>
+				<div>`;
     }
 }
 let steak = new restaurants(`img/pic2.jpg`, `Dstrikt Steakhouse`, `Schubertring 5-7, 1010 Vienna`, `0043-131188616`, `Bürgerlich`, `www.dstrikt.com`);
@@ -42,8 +53,18 @@ class events extends lokation {
         eventArray.push(this);
     }
     display() {
-        return `${super.display()} ${this.date} ${this.time} ${this.price}`;
+        return `<div>
+					<img src='${this.pic}'>
+					<h3>${this.adr}</h3>
+					<p>${this.city}</p>
+					<p>${this.date}</p>
+					<p>${this.time}</p>
+					<p>${this.price}</p>
+				<div>`;
     }
 }
 let dropout = new events(`some/image`, `Seasik Steve by Arena`, `Baumgasse 80, 1030 Wien`, `30.05.2020`, `20:00`, `40€`);
 let blues = new events(`some/image`, `Joe Bonamassa: An Acoustic Evening At The Vienna Opera`, `Opernring 2, 1010 Wien`, `30.10.2020`, `20:00`, `80€`);
+for (let i = 0; i < lokArray.length; i++) {
+    document.getElementById("result").innerHTML += lokArray[i].display();
+}
