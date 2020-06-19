@@ -1,34 +1,40 @@
-* img {
-  width: 100%; }
-
 body {
   background-image: url("https://media.istockphoto.com/photos/old-wooden-background-picture-id1153503972?b=1&k=6&m=1153503972&s=170667a&w=0&h=Q4OqGXHEJHEGgJe8UG6_qrvnpIn5J1AnYZq4Jbr1vwI="); }
 
 .header {
-  text-align: center; }
+  width: 100%;
+  text-align: center;
+  padding: 2em 0;
+  text-shadow: -2px 2px 2px #E4AE49;
+  background: #a9d7f2;
+  background: rgba(169, 215, 242, 0.8);
+  border-radius: 1em; }
 
 #result {
   width: 95%;
   margin: auto; }
 
 .inhalt {
-  min-width: 5em;
   max-width: 18em;
+  max-height: max-width;
   padding: 0;
-  margin-top: 1em;
+  margin: 1em;
   text-align: center;
   border-top-right-radius: 0.5em;
   border-bottom-left-radius: 0.7em;
   background: #a9d7f2;
   background: rgba(169, 215, 242, 0.5); }
   .inhalt div {
-    width: 100%; }
+    width: 100%;
+    height: width; }
   .inhalt h3 {
     color: #941E2F; }
   .inhalt p {
     font-size: 1em;
     font-weight: bold;
     margin: 0; }
+    .inhalt p i {
+      margin-right: 0.5em; }
 
 .border {
   border-color: #634BAA 1%; }

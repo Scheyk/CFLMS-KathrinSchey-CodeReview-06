@@ -16,12 +16,12 @@ $(document).ready(function () {
         }
         display() {
             return `
-					<div class='col-lg-3 col-md-6 col-sm-12 inhalt border'>
+					<div class='col-lg-3 col-md-6 inhalt border'>
 						<div class='d-none d-sm-block'>
 							<img class='img-fluid rounded' src='${this.pic}'>
 						</div>
 						<h3>${this.adr}</h3>
-						<p>${this.city}</p>
+						<p><i class='fas fa-archway'></i>${this.city}</p>
 					</div>`;
         }
     }
@@ -40,22 +40,22 @@ $(document).ready(function () {
             restArray.push(this);
         }
         display() {
-            return `<div class='col-lg-3 col-md-6 col-sm-12 inhalt border'>
+            return `<div class='col-lg-3 col-md-6 inhalt border'>
 						<div class='d-none d-sm-block'>
 							<img class='img-fluid rounded' src='${this.pic}'>
 						</div>
 						<h3>${this.adr}</h3>
-						<p>${this.city}</p>
-						<p>${this.telNum}</p>
+						<p><i class='fas fa-archway'></i>${this.city}</p>
+						<p><i class='fas fa-mobile-alt'></i>${this.telNum}</p>
 						<p>${this.nation}</p>
-						<p>${this.url}</p>
+						<p><i class='fas fa-at'></i>${this.url}</p>
 					<div>`;
         }
     }
     //class restaurant ends
     //input for array/class restaurant start
-    let steak = new restaurants(`img/pic3.jpg`, `Dstrikt Steakhouse`, `Schubertring 5-7, 1010 Vienna`, `0043-131188616`, `Bürgerlich`, `www.dstrikt.com`);
-    let fish = new restaurants(`img/pic4.jpg`, `Kulinarium 7`, `Sigmundsgasse 1,1070 Vienna`, `0043-5220530`, `National`, `https://www.kulinarium7.com/`);
+    let steak = new restaurants(`img/pic3.jpg`, `Dstrikt Steakhouse`, `Schubertring 5-7, 1010 Vienna`, `+43-131188616`, `Bürgerlich`, `www.dstrikt.com`);
+    let fish = new restaurants(`img/pic4.jpg`, `Kulinarium 7`, `Sigmundsgasse 1,1070 Vienna`, `+43-5220530`, `National`, `https://www.kulinarium7.com/`);
     //input for array/class restaurant ends
     //class event start
     class events extends lokation {
@@ -67,15 +67,15 @@ $(document).ready(function () {
             eventArray.push(this);
         }
         display() {
-            return `<div class='col-lg-3 col-md-6 col-sm-12 inhalt border'>
+            return `<div class='col-lg-3 col-md-6 inhalt border'>
 						<div class='d-none d-sm-block'>						
 							<img class='img-fluid rounded' src='${this.pic}'>
 						</div>						
 						<h3>${this.adr}</h3>
-						<p>${this.city}</p>
-						<p>${this.date}</p>
-						<p>${this.time}</p>
-						<p>${this.price}</p>
+						<p><i class='fas fa-archway'></i>${this.city}</p>
+						<p><i class='far fa-calendar-alt'></i>${this.date}</p>
+						<p><i class='far fa-clock'></i>${this.time}</p>
+						<p><i class='fas fa-money-bill-alt'></i>${this.price}</p>
 					<div>`;
         }
     }
