@@ -2,31 +2,27 @@ body {
   background-image: url("https://media.istockphoto.com/photos/old-wooden-background-picture-id1153503972?b=1&k=6&m=1153503972&s=170667a&w=0&h=Q4OqGXHEJHEGgJe8UG6_qrvnpIn5J1AnYZq4Jbr1vwI="); }
 
 .header {
-  width: 100%;
   text-align: center;
-  padding: 2em 0;
+  padding: 5em;
   text-shadow: -2px 2px 2px #E4AE49;
-  background: #a9d7f2;
-  background: rgba(169, 215, 242, 0.8);
-  border-radius: 1em; }
+  background-image: url("https://cdn.pixabay.com/photo/2017/04/14/11/30/school-2229931__340.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
 
 #result {
   width: 95%;
+  height: auto;
   margin: auto; }
 
 .inhalt {
-  max-width: 18em;
-  max-height: max-width;
-  padding: 0;
-  margin: 1em;
+  margin-top: 1em;
   text-align: center;
   border-top-right-radius: 0.5em;
   border-bottom-left-radius: 0.7em;
   background: #a9d7f2;
   background: rgba(169, 215, 242, 0.5); }
-  .inhalt div {
-    width: 100%;
-    height: width; }
+  .inhalt div img {
+    border: 1px solid #FFEFB5; }
   .inhalt h3 {
     color: #941E2F; }
   .inhalt p {
